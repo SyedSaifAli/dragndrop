@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  display: flex;
+  align-items: stretch;
+}
+
+.column {
+  background: #f5f5f5;
+  margin-right: 2%;
+  padding: 1%;
+  border-radius: 3px;
+  width: 32%;
+  float: left;
+  height: auto;
+}
+.column:last-of-type {
+  margin-right: 0;
+}
+.column .column-title {
+  font-weight: bold;
+  margin: 5px 0 20px;
+}
+.column .card {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: transform 250ms;
+}
+.column .card.selected {
+  transform: scale(1.15);
+  z-index: 1;
+}
+.column textarea {
+  border: none;
+  resize: vertical;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.column textarea:focus {
+  outline: none;
+}
